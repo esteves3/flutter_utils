@@ -5,12 +5,12 @@ extension DateTimeUtils on DateTime {
     return DateTime(year, month, 1);
   }
 
-  int getLastDayOfMonth() {
-    return DateTime(year, month + 1, 0).day;
+  DateTime getLastDayOfMonth() {
+    return DateTime(year, month + 1, 0);
   }
 
-  int getFirstDayOfTheWeek() {
-    return subtract(Duration(days: weekday - 1)).day;
+  DateTime getFirstDayOfTheWeek() {
+    return subtract(Duration(days: weekday - 1));
   }
 
   String format({String pattern = "dd/MM/yyyy", int substring = -1}) {
