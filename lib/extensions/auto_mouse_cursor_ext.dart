@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension GestureDetectorExtension on Widget {
+extension AutoMouseCursorExtension on Widget {
   Widget withCursor({MouseCursor cursor = SystemMouseCursors.click}) {
     return MouseRegion(
       cursor: cursor,
