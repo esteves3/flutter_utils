@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HoverZoomIn extends StatefulWidget {
   final Duration? duration;
-  final double zoom;
+  final double? zoom;
   final Widget? child;
   final bool? isHovered;
   const HoverZoomIn(

@@ -4,7 +4,7 @@ import 'package:flutter_utils/components/hover_zoom_in.dart';
 extension HoverZoomInExt on Widget {
   Widget hoverZoomIn({
     Duration? duration,
-    double zoom = 1.1,
+    double? zoom,
     bool? isHovered,
   }) {
     return HoverZoomIn(
