@@ -22,6 +22,8 @@ class _HoverZoomInState extends State<HoverZoomIn> {
 
   @override
   Widget build(BuildContext context) {
+    print(widget.zoom);
+
     return AnimatedContainer(
       duration: widget.duration ?? const Duration(milliseconds: 300),
       transform: Matrix4.identity()..scale(isHovered ? widget.zoom : 1),
