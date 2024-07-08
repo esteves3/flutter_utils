@@ -23,6 +23,7 @@ class _HoverZoomInState extends State<HoverZoomIn> {
 
   @override
   Widget build(BuildContext context) {
+    print("Actually rebuilding... $isHovered");
     return AnimatedContainer(
       duration: widget.duration ?? const Duration(milliseconds: 300),
       transform: Matrix4.identity()
@@ -31,6 +32,7 @@ class _HoverZoomInState extends State<HoverZoomIn> {
       child: InkWell(
         child: widget.child,
         onHover: (value) {
+          print("hovered: $value");
           if (widget.isHovered == null) {
             setState(() {
               isHovered = value;
