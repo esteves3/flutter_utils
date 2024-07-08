@@ -31,7 +31,7 @@ class _HoverZoomInState extends State<HoverZoomIn> {
       child: InkWell(
         child: widget.child,
         onHover: (value) {
-          if (widget.isHovered != null) {
+          if (widget.isHovered == null) {
             setState(() {
               isHovered = value;
             });
