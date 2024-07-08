@@ -30,6 +30,7 @@ class _HoverZoomInState extends State<HoverZoomIn> {
         //..translate(widget.zoomOffset?.dx ?? 0.0, widget.zoomOffset?.dy ?? 0.0)
         ..scale(isHovered ? widget.zoom : 1),
       clipBehavior: Clip.hardEdge,
+      decoration: const BoxDecoration(),
       child: MouseRegion(
         child: widget.child,
         onEnter: (event) => setState(() => isHovered = true),
