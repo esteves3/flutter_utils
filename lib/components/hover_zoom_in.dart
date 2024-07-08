@@ -29,6 +29,7 @@ class _HoverZoomInState extends State<HoverZoomIn> {
       transform: Matrix4.identity()
         //..translate(widget.zoomOffset?.dx ?? 0.0, widget.zoomOffset?.dy ?? 0.0)
         ..scale(isHovered ? widget.zoom : 1),
+      clipBehavior: Clip.hardEdge,
       child: MouseRegion(
         child: widget.child,
         onEnter: (event) => setState(() => isHovered = true),
