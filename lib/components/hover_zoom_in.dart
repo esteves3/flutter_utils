@@ -6,7 +6,7 @@ class HoverZoomIn extends StatefulWidget {
   final Widget? child;
   final bool? isHovered;
   const HoverZoomIn(
-      {super.key, this.zoom = 1.1, this.child, this.duration, this.isHovered});
+      {super.key, this.zoom = 1.02, this.child, this.duration, this.isHovered});
 
   @override
   State<HoverZoomIn> createState() => _HoverZoomInState();
@@ -23,12 +23,9 @@ class _HoverZoomInState extends State<HoverZoomIn> {
 
   @override
   Widget build(BuildContext context) {
-    print("Actually rebuilding... $isHovered");
     return AnimatedContainer(
       duration: widget.duration ?? const Duration(milliseconds: 300),
-      transform: Matrix4.identity()
-        //..translate(widget.zoomOffset?.dx ?? 0.0, widget.zoomOffset?.dy ?? 0.0)
-        ..scale(isHovered ? widget.zoom : 1),
+      transform: Matrix4.identity()..scale(isHovered ? widget.zoom : 1),
       clipBehavior: Clip.hardEdge,
       decoration: const BoxDecoration(),
       child: MouseRegion(
