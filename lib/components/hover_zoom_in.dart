@@ -29,16 +29,10 @@ class _HoverZoomInState extends State<HoverZoomIn> {
       transform: Matrix4.identity()
         //..translate(widget.zoomOffset?.dx ?? 0.0, widget.zoomOffset?.dy ?? 0.0)
         ..scale(isHovered ? widget.zoom : 1),
-      child: InkWell(
+      child: MouseRegion(
         child: widget.child,
-        onHover: (value) {
-          print("hovered: $value");
-          if (widget.isHovered == null) {
-            setState(() {
-              isHovered = value;
-            });
-          }
-        },
+        onEnter: (event) => setState(() => isHovered = true),
+        onExit: (event) => setState(() => isHovered = false),
       ),
     );
   }
