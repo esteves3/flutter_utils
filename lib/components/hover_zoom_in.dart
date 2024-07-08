@@ -14,7 +14,6 @@ class HoverZoomIn extends StatefulWidget {
 
 class _HoverZoomInState extends State<HoverZoomIn> {
   var isHovered = false;
-
   @override
   void initState() {
     isHovered = widget.isHovered ?? false;
