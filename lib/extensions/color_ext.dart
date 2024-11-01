@@ -21,4 +21,7 @@ extension ColorExtension on Color {
 
     return hslLight.toColor();
   }
+
+  Color get getTextColor =>
+      computeLuminance() > 0.5 ? Colors.black : Colors.white;
 }

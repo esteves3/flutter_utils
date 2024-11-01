@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_utils/components/hover_zoom_in.dart';
+import 'package:omni_flutter_utils/components/omni_hover_zoom_in.dart';
 
 extension HoverZoomInExt on Widget {
   Widget hoverZoomIn({
@@ -7,7 +7,7 @@ extension HoverZoomInExt on Widget {
     double? zoom,
     bool? isHovered,
   }) {
-    return HoverZoomIn(
+    return OmniHoverZoomIn(
       duration: duration,
       zoom: zoom,
       isHovered: isHovered,

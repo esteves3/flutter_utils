@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_utils/constants.dart';
+import 'package:omni_flutter_utils/util/omni_constants.dart';
 
-class CustomCard extends StatelessWidget {
+class OmniCard extends StatelessWidget {
   final Widget? child;
   final Color? color;
   final double? borderRadius;
   final EdgeInsets? padding;
-  const CustomCard(
+  const OmniCard(
       {super.key, this.child, this.color, this.borderRadius, this.padding});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: padding ?? const EdgeInsets.all(kDefaultPadding),
+        padding: padding ?? const EdgeInsets.all(OmniConstants.kDefaultPadding),
         clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
-          borderRadius:
-              BorderRadius.circular(borderRadius ?? kDefaultBorderRadius),
+          borderRadius: BorderRadius.circular(
+              borderRadius ?? OmniConstants.kDefaultBorderRadius),
           color: color ?? Colors.white,
           boxShadow: [
             BoxShadow(

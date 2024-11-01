@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class LoaderButton extends StatefulWidget {
+class OmniButton extends StatefulWidget {
   final Function() onPressed;
   final Color? bgColor;
   final bool isOutlined, disabled;
   final Widget child;
-  const LoaderButton(
+  const OmniButton(
       {super.key,
       required this.onPressed,
       this.bgColor,
@@ -14,10 +14,10 @@ class LoaderButton extends StatefulWidget {
       this.disabled = false});
 
   @override
-  State<LoaderButton> createState() => _LoaderButtonState();
+  State<OmniButton> createState() => _OmniButtonState();
 }
 
-class _LoaderButtonState extends State<LoaderButton> {
+class _OmniButtonState extends State<OmniButton> {
   var isLoading = false;
 
   Future<Null> Function()? fun;
@@ -60,10 +60,15 @@ class _LoaderButtonState extends State<LoaderButton> {
           : ElevatedButton(
               onPressed: fun,
               style: ElevatedButton.styleFrom(
+                  foregroundColor: widget.bgColor?.getTextColor,
                   disabledMouseCursor: SystemMouseCursors.forbidden,
                   backgroundColor: widget.bgColor),
               child: child,
             ),
     );
   }
+}
+
+extension on Color? {
+  get getTextColor => null;
 }

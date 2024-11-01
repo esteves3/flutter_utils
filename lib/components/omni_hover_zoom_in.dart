@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class HoverZoomIn extends StatefulWidget {
+class OmniHoverZoomIn extends StatefulWidget {
   final Duration? duration;
   final double? zoom;
   final Widget? child;
   final bool? isHovered;
-  const HoverZoomIn(
+  const OmniHoverZoomIn(
       {super.key, this.zoom, this.child, this.duration, this.isHovered});
 
   @override
-  State<HoverZoomIn> createState() => _HoverZoomInState();
+  State<OmniHoverZoomIn> createState() => _OmniHoverZoomInState();
 }
 
-class _HoverZoomInState extends State<HoverZoomIn> {
+class _OmniHoverZoomInState extends State<OmniHoverZoomIn> {
   var isHovered = false;
 
   @override

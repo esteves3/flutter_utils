@@ -2,11 +2,11 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class LifecycleEventHandler extends WidgetsBindingObserver {
+class OmniLifecycleEventHandler extends WidgetsBindingObserver {
   final AsyncCallback? resumeCallBack;
   final AsyncCallback? suspendingCallBack;
 
-  LifecycleEventHandler({
+  OmniLifecycleEventHandler({
     this.resumeCallBack,
     this.suspendingCallBack,
   });
